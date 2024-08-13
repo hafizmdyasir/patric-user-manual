@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>PyPaTriC - The official user manual</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="The official user manual for PyPaTriC">
+    <meta name="author" content="Mohammad Yasir">    
+    <link rel="shortcut icon" href="favicon.ico"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="assets/plugins/simplelightbox/simple-lightbox.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">PyPaTriC</span></a></div>    
+                </div><!--//docs-logo-wrapper-->
+
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	                <div class="top-search-box d-none d-lg-flex">
+		                <form class="search-form">
+				            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				        </form>
+	                </div>
+	
+					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
+			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+		            </ul><!--//social-list-->
+		            <a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-5-documentation-template-for-software-projects/" class="btn btn-primary d-none d-lg-flex">Download</a>
+	            </div><!--//docs-top-utilities-->
+            </div><!--//container-->
+        </div><!--//branding-->
+    </header><!--//header-->
+    
+    
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">How it Works</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Package Structure</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">PyPaTriC Modules</a></li>
+
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-key"></i></span>keys.py</a></li>
+
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-suitcase"></i></span>classes.py</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Random Class</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Uniform Class</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Maxwellian Class</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-4">Static Class</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-5">The Output Dict</a></li>
+
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Analyzing Output</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Data Structure</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">The Info File</a></li>
+
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Web</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">Section Item 6.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-2">Section Item 6.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-3">Section Item 6.3</a></li>
+
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder me-2"><i class="fas fa-tablet-alt"></i></span>Mobile</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Section Item 7.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Section Item 7.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-3">Section Item 7.3</a></li>
+
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Resources</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">Section Item 8.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">Section Item 8.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Section Item 8.3</a></li>
+
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-2">Section Item 9.2</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-3">Section Item 9.3</a></li>
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Introduction <span class="docs-time">Last updated: 2024-08-08</span></h1>
+					    <section class="docs-intro">
+						    <p>PyPaTriC stands for <strong>Python - Particle Tracker in C++</strong>. This python package has been designed to aid in the creation of the input scripts for the PaTriC charged particle tracker.
+						</section><!--//docs-intro-->						
+				    </header>
+
+					<section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">How it Works</h2>
+						<p>After installing this package, the user can import the <code>pypatric.deck_helper</code> module, which imports all the pre-defined keywords, classes, and functions. This makes everything in the package available for use.</p>
+
+						<p>The most important use of PyPaTriC is to provide functions to setup the input script for PaTriC. This makes the process as simple as calling these functions with the required arguments. PyPaTriC performs a quick check on the argument and ensures that any unexpected error does not show up during program execution.</p>
+					</section>
+
+				
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">Package Structure</h2>
+						<p>The PyPaTriC package has the following rough structure</p>
+
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code style="background: none;">	| pypatric
+	| ---- keys.py
+	| ---- classes.py
+	| ---- units.py
+	| ---- electric.py
+	| ---- magnetic.py
+	| ---- deck_helper.py
+</code>
+							</pre>
+						</div>
+					</section><!--//section-->
+					<section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">Installation</h2>
+						<p>PyPaTriC is available with most python package repositories with the package name <code>codecat_pypatric</code>. This is done to ensure uniqueness of package name.</p>
+
+						<p>To install PyPaTriC, you can use <code>pip</code> or <code>apt-get</code>. The exact command will vary depending on your pacakge manager, but it typically looks like <code>pip install codecat_pypatric</code>.</p>
+					</section>
+
+					<section class="docs-section" id="item-1-4">
+						<h2 class="section-heading">Modules in PyPaTriC</h2>
+						<p>The modules in pypatric are listed below. Their descriptions follow in the succeeding sections, which will help familiarize the user with the nuances of the program and allow them to bend PaTriC to their will.</p>
+
+						<h3>keys.py</h3>
+						<p>This module contains all the pre-defined constants that are used to setup the input script for PaTriC.</p>
+
+						<h3>classes.py</h3>
+						<p>This module defines various classes that can be used to set up the initial conditions for the target particles, as well as the electric and magnetic fields.</p>
+
+						<h3>units.py</h3>
+						<p>This module defines a few constants and methods that can help the user convert quantities across commonly used units.</p>
+
+						<h3>electric.py</h3>
+						<p>Classes that are exclusive to defining electric fields are defined in this module.</p>
+
+						<h3>magnetic.py</h3>
+						<p>Classes that are exclusive to defining magnetic fields are defined in this module.</p>
+
+						<h3>deck_helper.py</h3>
+						<p>This module brings together all the modules listed above and defines the functions that the user can call to define the input script. It is recommended that you import this module into your input script for everything to work perfectly.</p>
+					</section>
+
+
+				</article>
+
+			    <article class="docs-article" id="section-2">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">keys.py</h1>
+					    <section class="docs-intro">
+						    <p>There isn't much notable about this module. It is typically used directly by the program itself or imported indirectly through other modules. Most end-users will have no need to go into the bowels of this module.</p>
+
+							<p>However, a few constants of interest are listed below:</p>
+							<ul>
+								<li><code>BORIS</code>: Integer constant used to signal the use of the Boris push for the integration of the equation of motion.</li>
+								<li><code>VAY</code>: Integer constant used to signal the use of the Vay integrator.</li>
+								<li><code>HIGUERA_CARY</code>: Integer constant used to signal the use of the Higuera-Cary integrator.</li>
+							</ul>
+						</section><!--//docs-intro-->
+				    </header>
+				</article>
+			    
+
+			    <article class="docs-article" id="section-4">
+				    <header class="docs-header">
+						<h1 class="docs-heading">classes.py</h1>
+					    <section class="docs-intro">
+							<p>A description of each of the classes defined here is important. These classes are used to define initial conditions and electric and magnetic fields.</p>
+						</section><!--//docs-intro-->
+					</header>
+
+					<section class="docs-section" id="item-4-1">
+					<h2 class="section-heading">The Random Class</h2>
+						<p>This class is used to request random placement of particles. An instance of this class is passed inside a tuple to the <code>initialPosition</code> parameter of the Particle dictionary. The constructor for Random has the signature<br/>
+							<code>Random((x_min, y_min, z_min), (x_max, y_max, z_max))</code>.
+						</p>
+						
+						<p>When you pass an object of this type to the <code>initialPosition</code> parameter, the x-,y-, and z-components of the initial positions of the particles are randomly picked from the range [x_min, x_max], [y_min, y_max], and [z_min, z_max].</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-4-2">
+						<h2 class="section-heading">The Uniform Class</h2>
+						<p>This class is used to request uniform values for the initial positions and/or velocities for the target particles. The constructor signature is similar as the Random class, i.e.,<br/>
+							<code>Uniform((x_min, y_min, z_min), (x_max, y_max, z_max))</code>.
+						</p>
+
+						<p>Passing an object to this type to the <code>initialPosition</code> or <code>initialVelocity</code> parameter, the initial positions and/or velocities are uniformly distributed between the particles. </p>
+
+						<p></p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-4-3">
+						<h2 class="section-heading">The Maxwellian Class</h2>
+						<p>This class is exclusively for the <code>initialVelocity</code> parameter. It takes a single floating point parameter that corresponds to the temperature in Kelvin.</p>
+
+						<p>Its job is to instruct PaTriC to draw the initial velocities of the particles from a Maxwellian distribution centered at 0 with FWHM related to the temperature provided.</p>
+						<div class="callout-block callout-block-success">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-thumbs-up"></i>
+		                            </span><!--//icon-holder-->
+	                                Tip
+	                            </h4>
+                                <p>The <code>Maxwellian</code> class constructor takes its input in kelvins. If you wish to work in electron-volts, a helper function called <code>eVToKelvin</code> has been defined in the <code>units</code> module for your convenience.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+					</section><!--//section-->
+
+						<div class="callout-block callout-block-warning">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-bullhorn"></i>
+		                            </span><!--//icon-holder-->
+	                                Warning
+	                            </h4>
+                                <p>In python, tuples are typically defined using a pair of parantheses <code>()</code>. However, when you request <code>Uniform</code> or <code>Random</code> or <code>Maxwellian</code> placement, there will be only a single item in the tuple. In such a case, the code <code>(Maxwellian(temp))</code> will be considered the same as <code>Maxwellian(temp)</code>, i.e., the tuple won't be created. To get around this, always place a guard empty element in the tuple.<br/>
+								Use <code>(Maxwellian(temp), )</code>. </p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+
+
+					<section class="docs-section" id="item-4-4">
+						<h2 class="section-heading">The Static Class</h2>
+						<p>This class is used to instruct PaTriC to set a specific value for the initial position, initial velocity, electric field, and/or the magnetic fields. When used for the initial positions or initial velocities, the number of elements in the tuple passed to the <code>initialPosition</code> or <code>initialVelocity</code> parameter must exactly match the number of target particles in the system. Each entry in the tuple will then correspond to an individual particle.</p>
+
+						<p>The constructor has the signature <code>Static(x_component, y_component, z_component)</code>.</p>
+
+						<div class="callout-block callout-block-success">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-thumbs-up"></i>
+		                            </span><!--//icon-holder-->
+	                                Tip
+	                            </h4>
+                                <p>Suppose you want to simulate 10 particles with the same initial positions. In such a case, you don't need to create 10 separate objects of type <code>Static</code>. Instead, use the fact that python allows you to extend the length of a tuple by using the <code>*</code> operator. You can just set <code>initialPosition</code> as <code>tuple([Static(x,y,z)])*10</code>.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+
+					</section><!--//section-->
+
+					<section class="docs-section" id="item-4-5">
+						<h2 class="section-heading">The Output Dict</h2>
+						<p>The function of the Output dictionary is to inform PaTriC how to dump the data from the simulation. This includes the file name for output, the file path, any optional data you want to put in the info file, and the variables to dump.</p>
+
+						<p>The Output dictionary is created using the syntax <code>createOutput(fileName: str, filePath: str, fileHeaders: Tuple[str, ...], dumpInfoFile: bool, dumpVariables: Tuple[str, ...])</code>. A description is as follows:</p>
+
+						<h3>File Name and Path</h3>
+						<p>The <code>fileName</code> argument is a string representing the name of the output file. It should not include any extension. PaTriC will automatically assign <code>.dat</code> extension to the output files. The <code>filePath</code> argument is a string representing the directory path where the output file will be saved. If the directory does not exist, it will be created automatically.</p>
+
+						<h3>fileHeaders Argument</h3>
+						This is a tuple of strings that will be written to an info file dumped alongside the output files, containing basic information about the simulation run. Note that regardless of the number of particles, only a single info file is created and it has the same name as provided via <code>fileName</code>.
+
+						<h3>dumpInfoFile Flag</h3>
+						<p>If you want, you can disable the creation of the info file by passing <code>False</code> to this parameter. The default value is <code>True</code> and thus, info file will be created by default.</p>
+
+						<h3>dumpVariables Argument</h3>
+						<p>This is a tuple of strings that lists the variables you want to dump. Supported values inside this tuple are as follows:</p>
+						<ul>
+							<li><code>POS_(X,Y,Z)</code>: The (x,y,z)-component of position.</li>
+
+							<li><code>VEL_(X,Y,Z)</code>: The (x,y,z)-component of velocity.</li>
+
+							<li><code>E_FIELD_(X,Y,Z)</code>: The (x,y,z)-component of the electric field calculated at each time instant.</li>
+
+							<li><code>B_FIELD_(X,Y,Z)</code>: The (x,y,z)-component of the magnetic field calculated at each time instant</li>
+
+							<li><code>GAMMA</code>: The relativistic factor γ at each time instant.</li>
+						</ul>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-5">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Analyzing Output</h1>
+					    <section class="docs-intro">
+						    <p>The simulation data from PaTriC is saved as simple <code>.dat</code> files that are human readable and compatible with almost all plotting software. The plotters that ship with PaTriC are under construction and for now, your best bet is to use the <code>numpy.loadtxt</code> and use <code>matplotlib</code> to plot the data as per your convenience.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-5-1">
+						<h2 class="section-heading">Data Structure</h2>
+						<p>The output data file contains tabspace separated columns, with each column corresponding to a particular variable, and each row corresponding to a particular time-step. All data is dumped in SI units, in scientific format, with precision of 12 decimal places.</p>
+
+						<p>For each particle you load in the simulation, a separate output file will be created, and numbers starting with 0 will be appended at the end of the file name, corresponding to each particle.</p>
+
+						<p>The first row of is a header containing the description of each of the columns. The order of these columns is fixed and if a particular variable is not requested in the <code>dumpVariables</code> tuple in the Output dictionary, its column is not created in the output file.</p>
+
+						<h5>Order of Columns in Output File</h5>
+						<div class="table-responsive my-4">
+							<table class="table table-bordered table-dark">
+								<thead>
+									<tr>
+										<th scope="col">Column</th>
+										<th scope="col">Variable</th>
+										<th scope="col">Dumped</th>
+										<th scope="col">Units</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Time</td>
+										<td>Always</td>
+										<td>Seconds</td>
+									</tr>
+									<tr>
+										<th scope="row">2,3,4</th>
+										<td>Position (X,Y,Z)</td>
+										<td>On request</td>
+										<td>Metres</td>
+									</tr>
+									<tr>
+										<th scope="row">5,6,7</th>
+										<td>Velocity (X,Y,Z)</td>
+										<td>On request</td>
+										<td>Metres per second</td>
+									</tr>
+									<tr>
+										<th scope="row">8</th>
+										<td>Relativistic Factor γ</td>
+										<td>On request</td>
+										<td>Dimensionless</td>
+									</tr>
+									<tr>
+										<th scope="row">9,10,11</th>
+										<td>Electric Field (X,Y,Z)</td>
+										<td>On request</td>
+										<td>Volts per metre</td>
+									</tr>
+									<tr>
+										<th scope="row">12,13,14</th>
+										<td>Magnetic Field (X,Y,Z)</td>
+										<td>On request</td>
+										<td>Tesla</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--//table-responsive-->
+
+						<div class="callout-block callout-block-info">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>Since the electric and magnetic fields are calculated at the beginning of each iteration, the very last iteration does not have information about them. Thus, the last row for electric and magnetic fields will contain <code>NaN</code>.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-5-2">
+						<h2 class="section-heading">The Info File</h2>
+						<p>This is a plain text file named as <code>&lt;fileName&gt;.info</code>. The strings you provide in the <code>fileHeaders</code> tuple will be written at the top of this info file, with each string in a new line.</p>
+
+						<p>The info file also contains the the total time taken (tt) to run the program, the time-step used (dt), and the number of tierations (ni). And finally, the target information including charge, mass, number of particles, and initial conditions for each of the particles are also dumped in this file. This can come in handy when analyzing the output.</p>
+					</section><!--//section-->
+					
+					
+			    </article><!--//docs-article-->
+			    
+			    
+		        <article class="docs-article" id="section-6">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Web</h1>
+					    <section class="docs-intro">
+						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-6-1">
+						<h2 class="section-heading">Section Item 6.1</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-6-2">
+						<h2 class="section-heading">Section Item 6.2</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-6-3">
+							<h2 class="section-heading">Section Item 6.3</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-7">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Mobile</h1>
+					    <section class="docs-intro">
+						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-7-1">
+						<h2 class="section-heading">Section Item 7.1</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-7-2">
+						<h2 class="section-heading">Section Item 7.2</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-7-3">
+							<h2 class="section-heading">Section Item 7.3</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-8">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Resources</h1>
+					    <section class="docs-intro">
+						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-8-1">
+						<h2 class="section-heading">Section Item 8.1</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-8-2">
+						<h2 class="section-heading">Section Item 8.2</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-8-3">
+							<h2 class="section-heading">Section Item 8.3</h2>
+						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-9">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">FAQs</h1>
+					    <section class="docs-intro">
+						    <p>Section intro goes here. You can list all your FAQs using the format below.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section" id="item-9-1">
+						<h2 class="section-heading">Section Item 9.1 <small>(FAQ Category One)</small></h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What's sit amet quam eget lacinia?</h5>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to ipsum dolor sit amet quam tortor?</h5>
+						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I  bibendum sodales?</h5>
+						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where arcu sed urna gravida?</h5>
+						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna. </p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-9-2">
+						<h2 class="section-heading">Section Item 9.2 <small>(FAQ Category Two)</small></h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>What's sit amet quam eget lacinia?</h5>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to ipsum dolor sit amet quam tortor?</h5>
+						<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Can I  bibendum sodales?</h5>
+						<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+						<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where arcu sed urna gravida?</h5>
+						<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna. </p>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-9-3">
+							<h2 class="section-heading">Section Item 9.3 <small>(FAQ Category Three)</small></h2>
+						    <h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How to dapibus sollicitudin justo vel fermentum?</h5>
+							<p>Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+							<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>How long bibendum sodales?</h5>
+							<p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. </p>
+							<h5 class="pt-3"><i class="fas fa-question-circle me-1"></i>Where dapibus sollicitudin?</h5>
+							<p>Aenean et sodales nisi, vel efficitur sapien. Quisque molestie diam libero, et elementum diam mollis ac. In dignissim aliquam est eget ullamcorper. Sed id sodales tortor, eu finibus leo. Vivamus dapibus sollicitudin justo vel fermentum. Curabitur nec arcu sed urna gravida lobortis. Donec lectus est, imperdiet eu viverra viverra, ultricies nec urna. </p>
+					</section><!--//section-->
+			    </article><!--//docs-article-->
+
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+			            <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+				        <ul class="social-list list-unstyled pt-4 mb-0">
+						    <li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li> 
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+				        </ul><!--//social-list-->
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+   
+       
+    <!-- Javascript -->          
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="assets/plugins/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>      
+    <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+

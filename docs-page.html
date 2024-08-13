@@ -72,30 +72,22 @@
 		    <nav id="docs-nav" class="docs-nav navbar">
 			    <ul class="section-items list-unstyled nav flex-column pb-3">
 				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Documentation Structure</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Section Item 1.2</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Section Item 1.3</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Section Item 1.4</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Section Item 1.5</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">Section Item 1.6</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">What PaTriC Does?</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Documentation Structure</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-arrow-down"></i></span>Installation</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Code Structure</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Prerequisites</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Download & Install</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-box"></i></span>Run PaTriC</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Section Item 3.1</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Section Item 3.2</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Section Item 3.3</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Download and Install</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Run PaTriC</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>The Input Script</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Overview</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">The Control Dict</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">The Particle Dict</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-4">The Fields Dict</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-5">The Output Dict</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Utilities</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Section Item 5.1</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Section Item 5.2</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">Section Item 5.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Analyzing Output</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Data Structure</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">The Info File</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Web</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">Section Item 6.1</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-2">Section Item 6.2</a></li>
@@ -130,8 +122,32 @@
 						</section><!--//docs-intro-->						
 				    </header>
 
-				    <section class="docs-section" id="item-1-1">
+					<section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">What PaTriC Does?</h2>
+						<p>PaTriC can simulate the motion of any number of targets in specified electric and magnetic fields, following the isolated particle model. It ignores inter-particle interactions and simulates how a charged particle will move.</p>
+
+                        <p>PaTriC is designed to be highly flexible and easy to use, allowing users to customize every aspect of the simulation and output. When you set up the simulation, you instruct PaTriC about the time-step, the integrator, the number of particles, etc. PaTriC uses the specified integration algorithm to solve the equation of motion for the target particle using the Lorentz Force as the driving force.</p>
+					</section>
+
+				
+					<section class="docs-section" id="item-1-2">
 						<h2 class="section-heading">Documentation Structure</h2>
+						<p>In this documentation, you will find all you need to know about installing and running PaTriC. An introduction has already been given above. The following sections discuss, in order:</p>
+						<ul>
+							<li>Installation</li>
+							<li>Running</li>
+							<li>Input Script</li>
+							<li>Analyzing Output</li>
+							<li>FAQs</li>
+						</ul>
+						<p>To get started, read through the manual in order and refer to the FAQs if you get stuck at any time.</p>
+
+						<div class="alert alert-primary" role="alert">
+							The user guide for the <code>pypatric</code> package is provided at <a href="pypatric.html">this page</a>. After going through this documentation, we also recommend going through it.
+						</div>
+					</section><!--//section-->
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">Section item 1.2</h2>
 						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. </p>
 						<p>Code Example: <code>npm install &lt;package&gt;</code></p>
 						<h5>Unordered List Examples:</h5>
@@ -149,7 +165,6 @@
 						</ol>
                         <h5>Callout Examples:</h5>
                         <div class="callout-block callout-block-info">
-                            
                             <div class="content">
                                 <h4 class="callout-title">
 	                                <span class="callout-icon-holder me-1">
@@ -425,19 +440,18 @@
 						<h2 class="section-heading">Section Item 1.6</h2>
 						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
 					</section><!--//section-->
-					
 			    </article>
 			    
 			    <article class="docs-article" id="section-2">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">Installation</h1>
+					    <h1 class="docs-heading">Install and Run</h1>
 					    <section class="docs-intro">
-						    <p>PaTriC does not ship in the form of executable binaries. Instead, you must download the source code and compile it on your system. Owing to certain features utilizing Linux-specific headers, PaTriC is only available on Linux. In this section, you will find everything you need to know about downloading, installing, and getting started with PaTriC.</p>
+						    <p>PaTriC does not ship in the form of executable binaries. Instead, you must download the source code and compile it on your system. Owing to certain features utilizing Unix-specific headers, PaTriC is only available on Unix operating systems. In this section, you will find everything you need to know about downloading, installing, and getting started with PaTriC.</p>
 						</section><!--//docs-intro-->
 				    </header>
-				     <section class="docs-section" id="item-2-1">
-						<h2 class="section-heading">Structure</h2>
-						<p>PaTriC is primarily written in C++ but there are minor pieces of the code that utilize Python. To setup a simulation, you create an input script; a file that tells PaTriC all it needs to know about the simulation.</p>
+				    <section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Code Structure</h2>
+						<p>PaTriC is primarily written in C++ but there are minor pieces of the code that utilize Python. To setup a simulation, you create an input script; a file that tells PaTriC all it needs to know about the simulation. This file is passed to the patric executable as the first argument. Once an input script is ready, you can run PaTriC by using the terminal command <code>patric path/to/input.py</code></p>
 
 						<p>This input file is written in Python and contains the following information:</p>
 						<ol>
@@ -450,22 +464,22 @@
 
 					<section class="docs-section" id="item-2-2">
 						<h2 class="section-heading">Prerequisites</h2>
-						<p>
-							To get started, you will need the following:
-							<ol>
-								<li>A C++ compiler (e.g., g++, clang++)</li>
-                                <li>Python 3.x</li>
-								<li>The <code>pypatric</code> package. Get it here.</li>
-							</ol>
-						</p>
+						<p>To get started, you will need the following:
+						<ol>
+							<li>A C++ compiler (e.g., g++, clang++)</li>
+							<li>Python 3.x</li>
+							<li>The <code>pypatric</code> package. Get it here.</li>
+						</ol></p>
+
+						<p>Furthermore, it is assumed that you have, at the very least, a basic understanding of how simulations work, python programming, and some knowledge about the terminal in the linux operating system.</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-2-3">
 						<h2 class="section-heading">Download & Install</h2>
-						<p>You can grab the latest version of PaTriC from its GitHub releases page or use the big button in the top-right :). When you extract the zipped archive, you will end up with a folder named PaTriC whose structure is as follows:</p>
+						<p>You can grab the latest version of PaTriC from its GitHub releases page. Use the big green button in the top-right corner to get there. The release is provided as a zipped archive. When you extract it, you will end up with a folder named PaTriC whose structure is as follows:</p>
 
 						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="bash">	| PaTriC
+							<pre class="shadow-lg rounded"><code style="background: none;">	| PaTriC
 	| ---- README.md
 	| ---- LICENSE.txt
 	| ---- compile.sh
@@ -482,26 +496,28 @@
 	|	/---- pyserver.py
 	|
 	|	/---- pypatric/
-	|		/---- several .py files</code></pre>
+	|		/---- several .py files
+	|
+	| ---- plotters/
+	|	/---- 2DPlot.py
+	|	/---- 3DPlot.py
+	|	/---- utils.py</code></pre>
 						</div><!--//docs-code-block-->
-						<p>All you need to worry about here is the <code>compile.sh</code>script. It will take care of everything for you. Fire up a terminal in the extracted PaTriC folder and make this script executable using the command <br/>
-							<code>$ chmod +x ./compile.sh</code>.<br/>
-						Now, run this script and follow the on-screen instructions.</p>
 
-						<p>If all goes well, you will find an executable named patric in the <code>runtime</code> folder. Add this folder to your system path and you're ready to go.</p>
+						<p>All you need to worry about here is the <code>compile.sh</code>script. It will take care of everything for you. Fire up a terminal in the extracted PaTriC folder and make this script executable using the command <br/>
+							<code>$ chmod +x ./compile.sh</code>.<br/></p>
+
+						<p>Now, run this script using <code>./compile.sh</code> and follow the on-screen instructions. If all goes well, you will find an executable named patric in the <code>runtime</code> folder. Add this folder to your system path and you're ready to go.</p>
 					</section><!--//section-->
-					
-			    </article><!--//docs-article-->
-			    
-			    
-			    <article class="docs-article" id="section-3">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Run PaTriC</h1>
-					    <section class="docs-intro">
-						    <p>If you have added the <code>patric</code> executable to your system path, runing it is as simple as firing up terminal and typing patric. Try it and you should end up with an output as follows:</p>
+
+					<section class="docs-section" id="item-2-4">
+					<h2 class="section-heading">Run PaTriC</h2>
+						<p>If you have added the <code>patric</code> executable to your system path, running it is as simple as firing up terminal and typing <code>patric</code>. We strongly recommend this approach since this makes it easy to run PaTriC from anywhere, and ensures that the required python scripts for full functionality of the program are available for the program to use.</p>
+
+						<p>Type patric in the terminal and you should end up with an output as follows:</p>
 
 							<div class="docs-code-block">
-								<pre class="shadow-lg rounded"><code class="bash">####        #######                 ####   
+								<pre class="shadow-lg rounded"><code style="background: none;">####        #######                 ####   
 #    #          #                   #    #  
 #    #          #                   #       
 #####   ###     #     ###   #####   #       
@@ -517,53 +533,40 @@ IIT Delhi
 No configuration file specified. Program will exit.
 Terminated</code></pre>
 							</div><!--//docs-code-block-->
-						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-3-1">
-						<h2 class="section-heading">Section Item 3.1</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
+							<p>If you can see this screen, it means that all is going well and you are ready for the next step. Read through the following sections to understand how the input script is created.</p>
+					</section>
 					
-					<section class="docs-section" id="item-3-2">
-						<h2 class="section-heading">Section Item 3.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-3-3">
-						<h2 class="section-heading">Section Item 3.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
 			    <article class="docs-article" id="section-4">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">The Input Script</h1>
+						<h1 class="docs-heading">The Input Script</h1>
 					    <section class="docs-intro">
-						    <p>As stated before, the input script for PaTriC is written in Python, and the path to this script is passed to the PaTriC executable as the first argument. The program then parses it and displays the parsed information before asking whether to proceed. This is a good point to recheck whether you have provided all parameters correctly or not.</p>
-
+							<p>As stated before, the input script for PaTriC is written in Python, and the path to this script is passed to the PaTriC executable as the first argument. The program then parses it and displays the parsed information before asking whether to proceed. This is a good point to recheck whether you have provided all parameters correctly or not.</p>
+							
 							<p>In the following sections, we will understand the nuances of the input script and learn how to setup a simulation.</p>
 						</section><!--//docs-intro-->
-				    </header>
+					</header>
 
 					<section class="docs-section" id="item-4-1">
 					<h2 class="section-heading">Overview</h2>
-						<p>The input script consists of four python <code>dict</code> objects named <code>Control</code>, <code>Particle</code>, <code>Fields</code>, and <code>Output</code>. Each of these dictionaries serve a specific purpose and contain key-value pairs where the keys are special keywords defined inside the PaTriC source code.</p>
+						<p>The input script consists of four python <code>dict</code> objects named <code>Control</code>, <code>Particle</code>, <code>Fields</code>, and <code>Output</code>. Each of these dictionaries serves a specific purpose and contains key-value pairs where the keys are special keywords defined inside the PaTriC source code.</p>
 
-						<p>Since it is understandbly difficult to remember, recall, and type the keywords each time you set up a simulation, we have created a package called <code>pypatric</code>that makes your job easier. This package also validates your parameters to ensure nothing unexpected happens during program execution. </p>
+						<p>Since it is understandbly difficult to remember, recall, and type the keywords each time you set up a simulation, we have created a package called <code>pypatric</code> that makes your job easier. This package also validates your parameters to ensure nothing unexpected happens during program execution. </p>
 
-						<p>The four dictionaries are defined using four functions defined in the <code>pypatric.deck_helper</code> module. Thus, every time you want to setup a simulation, start by creating a python file and importing this module.</p>
+						<p>The four dictionaries are defined using four functions from the <code>pypatric.deck_helper</code> module. Thus, every time you want to setup a simulation, start by creating a python file and importing this module.</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-4-2">
 						<h2 class="section-heading">The Control Dict</h2>
 						<p>The purpose of the <code>Control</code> dictionary is to inform PaTriC about the control of the simulation. This includes the time-step for each iteration, the number of iterations before the program stops, the integration algorithm, and an optional message display frequency.</p>
 
-						<p>The calling signature for the function to define the Control dictionary is <code>createControl(dt: float, N: int, integrator: int, stdoutFrequency: int)</code>.</p>
+						<p>The calling signature for the function to define the Control dictionary is <code>createControl(timeStep: float, numiterations: int, integrator: int, readoutFreq: int)</code>.</p>
 
 						<h3>Time Step</h3>
 						<p>In each iteration of the program, the particle advances by a time-step <i>dt</i> across its trajectory in the phase space. This value is passed as the first argument to the <code>createControl</code> function.</p>
 						
-						<p>The choice of the time-step depends on the user and the system being studied. There is no fixed formula that will give the best results. Typically, finer step-sizes give better results, but require a large number of iterations, which increases computation time and memory consumption. Further, the choice of the integrator also affects the accuracy of the output.</p>
+						<p>The choice of the time-step depends on the user and the system being studied. There is no fixed formula that will give the best results. Typically, finer step-sizes give more accurate results, but require a large number of iterations, which increases computation time and memory consumption. Further, the choice of the integrator also affects the accuracy of the output.</p>
 
 						<p>For most cases, we recommend a step-size of at least T/10, where T is the time-period of the fastest process in the system. For increased accuracy, one can use T/20, T/50, or even T/100, but the latter is overkill.</p>
 
@@ -571,7 +574,7 @@ Terminated</code></pre>
 						<p>This is passed as the second argument and defines how many steps the program will run for. Any process happening within the system will require at least T/dt iterations to be fully resolved.</p>
 
 						<h3>Integrator</h3>
-						<p>PaTriC has support for three explicit, second-order integration integration algorithms. These are the Boris push, the Vay integrator, and the Higuera-Cary push. Use predefined keywords <code>BORIS</code>, <code>VAY</code>, and <code>HIGUERA_CARY</code> to choose which integrator you need.</p>
+						<p>PaTriC has support for three explicit, second-order integration algorithms. These are the Boris push, the Vay integrator, and the Higuera-Cary push. Use predefined keywords <code>BORIS</code>, <code>VAY</code>, and <code>HIGUERA_CARY</code> to choose which integrator you need.</p>
 
 						<p>The performance of each of these integrators has been well-studied before and the Boris push usually suffices. The Vay integrator comes at a higher computation cost but can yield better cross-field drifts, while the Higuera-Cary integrator has the best phase performance.</p>
 
@@ -583,22 +586,21 @@ Terminated</code></pre>
 						<h2 class="section-heading">The Particle Dict</h2>
 						<p>The Particle dictionary is where you define the target of your simulation. PaTriC provides the functionality to simulate a large number of charged particles in succession, each with a given initial condition. This is useful for studying, say, a distribution of particles in a given configuration. Note that regardless of how many particles you simulate, they will be studied separately and remain uninfluenced by each other. </p>
 
-						<p>The Particle dictionary is created using the signature <code>createParticles(numParticles: int, charge: float, mass: float, initialPosition: tuple, initialVelocity: tuple)</code>. The charge and mass are commonly assigned to each of the particles, while the initial positions and velocities can either be assigned separately, or drawn from a uniform distribution, or generated randomly.</p>
+						<p>The Particle dictionary is created using the signature <code>createParticles(mass: float, charge: float, particleCount: int, initialPosition: Tuple, initialVelocity: Tuple)</code>. The charge and mass are assigned commonly to each of the particles, while the initial positions and velocities can either be assigned separately, or drawn from a uniform distribution, or generated randomly.</p>
 
 						<h3>Number of Particles</h3>
 						<p>This is an integer parameter and is limited only by the configuration of your machine. It is theoretically possible to study as many as 10<sup>6</sup> particles, but that is an unrealistic number.</p>
 
-						<h3>The Charge on the particles</h3>
+						<h3>The Charge and Mass of the Particles</h3>
 						<p>The charge is provided in units of the fundamental charge, <i>e</i> = 1.6E19 C. It can be any signed floating point number. The same charge is assigned to all the particles in the simulation.</p>
 
-						<h3>Mass of the particles</h3>
 						<p>Mass is provided in units of the mass of electron m<sub>e</sub> = 9.1E-31 kg. It is also given to all the particles. This quantity must be a positive float.</p>
 
 						<h3>Initial Position</h3>
 						<p>The initial position argument <strong>must</strong> be provided as a python <code>tuple</code>. You may either provide a separate initial position for each of the particles using the <code>Static</code> class defined in <code>pypatric.classes</code> module, or draw it uniformly between a given range using <code>Uniform</code>, or generate randomly using <code>Random</code>. The explanation for each of these classes is given in the section that explains the <code>pypatric</code> module. </p>
 
 						<h3>Initial Velocity</h3>
-						<p>The initial velocity is also provided as a tuple containing either <code>Static</code> type objects, or a single <code>Uniform</code> or <code>Maxwellian</code> object. THe former gives uniformly distributed velocities between the given range, while the latter samples from a Maxwellian distribution centered at 0 with FWHM given by the temperature provided as an argument.</p>
+						<p>The initial velocity is also provided as a tuple containing either <code>Static</code> type objects, or a single <code>Uniform</code> or <code>Maxwellian</code> object. The former gives uniformly distributed velocities between the given range, while the latter samples from a Maxwellian distribution centered at 0 with FWHM given by the temperature provided as an argument.</p>
 
 						<div class="callout-block callout-block-warning">
                             <div class="content">
@@ -608,7 +610,7 @@ Terminated</code></pre>
 		                            </span><!--//icon-holder-->
 	                                Warning
 	                            </h4>
-                                <p>In python, tuples are typically defined using a pair of parantheses '()'. However, when you request <code>Uniform</code> or <code>Random</code> or <code>Maxwellian</code> placement, there will be only a single item in the tuple. In such a case, the code <code>(Maxwellian(temp))</code> will be considered the same as <code>Maxwellian(temp)</code>, i.e., the tuple won't be created. To get around this, always place a guard empty element in the tuple.<br/>
+                                <p>In python, tuples are typically defined using a pair of parantheses <code>()</code>. However, when you request <code>Uniform</code> or <code>Random</code> or <code>Maxwellian</code> placement, there will be only a single item in the tuple. In such a case, the code <code>(Maxwellian(temp))</code> will be considered the same as <code>Maxwellian(temp)</code>, i.e., the tuple won't be created. To get around this, always place a guard empty element in the tuple.<br/>
 								Use <code>(Maxwellian(temp), )</code>. </p>
                             </div><!--//content-->
                         </div><!--//callout-block-->
@@ -628,37 +630,133 @@ Terminated</code></pre>
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-4-4">
-						<h2 class="section-heading">Section Item 4.4</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">The Fields Dict</h2>
+						<p>This is the part where you define the electric and magnetic fields that will be used to evolve the system. The syntax is fairly simple. Call the function <code>createFields(electricFields: Tuple | Callable, magneticFields: Tuple | Callable)</code>.</p>
+
+						<p>The tuple must contain either a number of objects of pre-defined classes (see <a href="pypatric.html#section-4">PyPaTriC - Classes</a>), or a function named <code>getEField</code> or <code>getBField</code> taking the arguments <code>x,y,z,t</code>, and returning the three components of the electric and magnetic fields as a tuple.</p>
+						
+						<p>In the former case, the value of the field will be a superposition of the values calculated by each of the objects passed to the tuple. In the latter case, the tuple must only contain one entry: the function with the signature as stated just now. A python interpreter will be used to call this function at each iteration. This is slightly more expensive.</p>
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-4-5">
-						<h2 class="section-heading">Section Item 4.5</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">The Output Dict</h2>
+						<p>The function of the Output dictionary is to inform PaTriC how to dump the data from the simulation. This includes the file name for output, the file path, any optional data you want to put in the info file, and the variables to dump.</p>
+
+						<p>The Output dictionary is created using the syntax <code>createOutput(fileName: str, filePath: str, fileHeaders: Tuple[str, ...], dumpInfoFile: bool, dumpVariables: Tuple[str, ...])</code>. A description is as follows:</p>
+
+						<h3>File Name and Path</h3>
+						<p>The <code>fileName</code> argument is a string representing the name of the output file. It should not include any extension. PaTriC will automatically assign <code>.dat</code> extension to the output files. The <code>filePath</code> argument is a string representing the directory path where the output file will be saved. If the directory does not exist, it will be created automatically.</p>
+
+						<h3>fileHeaders Argument</h3>
+						This is a tuple of strings that will be written to an info file dumped alongside the output files, containing basic information about the simulation run. Note that regardless of the number of particles, only a single info file is created and it has the same name as provided via <code>fileName</code>.
+
+						<h3>dumpInfoFile Flag</h3>
+						<p>If you want, you can disable the creation of the info file by passing <code>False</code> to this parameter. The default value is <code>True</code> and thus, info file will be created by default.</p>
+
+						<h3>dumpVariables Argument</h3>
+						<p>This is a tuple of strings that lists the variables you want to dump. Supported values inside this tuple are as follows:</p>
+						<ul>
+							<li><code>POS_(X,Y,Z)</code>: The (x,y,z)-component of position.</li>
+
+							<li><code>VEL_(X,Y,Z)</code>: The (x,y,z)-component of velocity.</li>
+
+							<li><code>E_FIELD_(X,Y,Z)</code>: The (x,y,z)-component of the electric field calculated at each time instant.</li>
+
+							<li><code>B_FIELD_(X,Y,Z)</code>: The (x,y,z)-component of the magnetic field calculated at each time instant</li>
+
+							<li><code>GAMMA</code>: The relativistic factor γ at each time instant.</li>
+						</ul>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
 			    <article class="docs-article" id="section-5">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">Utilities</h1>
+					    <h1 class="docs-heading">Analyzing Output</h1>
 					    <section class="docs-intro">
-						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						    <p>The simulation data from PaTriC is saved as simple <code>.dat</code> files that are human readable and compatible with almost all plotting software. The plotters that ship with PaTriC are under construction and for now, your best bet is to use the <code>numpy.loadtxt</code> and use <code>matplotlib</code> to plot the data as per your convenience.</p>
 						</section><!--//docs-intro-->
 				    </header>
 				     <section class="docs-section" id="item-5-1">
-						<h2 class="section-heading">Section Item 5.1</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">Data Structure</h2>
+						<p>The output data file contains tabspace separated columns, with each column corresponding to a particular variable, and each row corresponding to a particular time-step. All data is dumped in SI units, in scientific format, with precision of 12 decimal places.</p>
+
+						<p>For each particle you load in the simulation, a separate output file will be created, and numbers starting with 0 will be appended at the end of the file name, corresponding to each particle.</p>
+
+						<p>The first row of is a header containing the description of each of the columns. The order of these columns is fixed and if a particular variable is not requested in the <code>dumpVariables</code> tuple in the Output dictionary, its column is not created in the output file.</p>
+
+						<h5>Order of Columns in Output File</h5>
+						<div class="table-responsive my-4">
+							<table class="table table-bordered table-dark">
+								<thead>
+									<tr>
+										<th scope="col">Column</th>
+										<th scope="col">Variable</th>
+										<th scope="col">Dumped</th>
+										<th scope="col">Units</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Time</td>
+										<td>Always</td>
+										<td>Seconds</td>
+									</tr>
+									<tr>
+										<th scope="row">2,3,4</th>
+										<td>Position (X,Y,Z)</td>
+										<td>On request</td>
+										<td>Metres</td>
+									</tr>
+									<tr>
+										<th scope="row">5,6,7</th>
+										<td>Velocity (X,Y,Z)</td>
+										<td>On request</td>
+										<td>Metres per second</td>
+									</tr>
+									<tr>
+										<th scope="row">8</th>
+										<td>Relativistic Factor γ</td>
+										<td>On request</td>
+										<td>Dimensionless</td>
+									</tr>
+									<tr>
+										<th scope="row">9,10,11</th>
+										<td>Electric Field (X,Y,Z)</td>
+										<td>On request</td>
+										<td>Volts per metre</td>
+									</tr>
+									<tr>
+										<th scope="row">12,13,14</th>
+										<td>Magnetic Field (X,Y,Z)</td>
+										<td>On request</td>
+										<td>Tesla</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!--//table-responsive-->
+
+						<div class="callout-block callout-block-info">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>Since the electric and magnetic fields are calculated at the beginning of each iteration, the very last iteration does not have information about them. Thus, the last row for electric and magnetic fields will contain <code>NaN</code>.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-5-2">
-						<h2 class="section-heading">Section Item 5.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">The Info File</h2>
+						<p>This is a plain text file named as <code>&lt;fileName&gt;.info</code>. The strings you provide in the <code>fileHeaders</code> tuple will be written at the top of this info file, with each string in a new line.</p>
+
+						<p>The info file also contains the the total time taken (tt) to run the program, the time-step used (dt), and the number of tierations (ni). And finally, the target information including charge, mass, number of particles, and initial conditions for each of the particles are also dumped in this file. This can come in handy when analyzing the output.</p>
 					</section><!--//section-->
 					
-					<section class="docs-section" id="item-5-3">
-							<h2 class="section-heading">Section Item 5.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
+					
 			    </article><!--//docs-article-->
 			    
 			    
