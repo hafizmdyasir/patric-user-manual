@@ -181,6 +181,10 @@
   text-align: justify;
 }
 
+.MathJax {
+  color: #000;
+}
+
 *,
 *::before,
 *::after {

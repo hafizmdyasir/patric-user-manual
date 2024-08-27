@@ -84,13 +84,14 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Uniform Class</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Maxwellian Class</a></li>
 					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-4">Static Class</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-5">The Output Dict</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-5">SinField Class</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-4-6">GaussField Class</a></li>
 
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-tools"></i></span>Analyzing Output</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Data Structure</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">The Info File</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-bolt"></i></span>electric.py</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">Point Charge</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Electric Dipole</a></li>
 
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-laptop-code"></i></span>Web</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-magnet"></i></span>magnetic.py</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">Section Item 6.1</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-2">Section Item 6.2</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-3">Section Item 6.3</a></li>
@@ -142,16 +143,14 @@
 	| ---- units.py
 	| ---- electric.py
 	| ---- magnetic.py
-	| ---- deck_helper.py
-</code>
-							</pre>
+	| ---- deck_helper.py</code></pre>
 						</div>
 					</section><!--//section-->
 					<section class="docs-section" id="item-1-3">
 						<h2 class="section-heading">Installation</h2>
 						<p>PyPaTriC is available with most python package repositories with the package name <code>codecat_pypatric</code>. This is done to ensure uniqueness of package name.</p>
 
-						<p>To install PyPaTriC, you can use <code>pip</code> or <code>apt-get</code>. The exact command will vary depending on your pacakge manager, but it typically looks like <code>pip install codecat_pypatric</code>.</p>
+						<p>To install PyPaTriC, you can use <code>pip</code> or <code>apt-get</code>. The exact command will vary depending on your package manager, but it typically looks like <code>pip install codecat_pypatric</code>.</p>
 					</section>
 
 					<section class="docs-section" id="item-1-4">
@@ -211,7 +210,7 @@
 							<code>Random((x_min, y_min, z_min), (x_max, y_max, z_max))</code>.
 						</p>
 						
-						<p>When you pass an object of this type to the <code>initialPosition</code> parameter, the x-,y-, and z-components of the initial positions of the particles are randomly picked from the range [x_min, x_max], [y_min, y_max], and [z_min, z_max].</p>
+						<p>When you pass an object of this type to the <code>initialPosition</code> parameter, the x-,y-, and z-components of the initial positions of the particles are randomly picked from the range $[x_{min}, x_{max}],\ [y_{min}, y_{max}],$ and $[z_{min}, z_{max}]$.</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-4-2">
@@ -227,9 +226,10 @@
 					
 					<section class="docs-section" id="item-4-3">
 						<h2 class="section-heading">The Maxwellian Class</h2>
-						<p>This class is exclusively for the <code>initialVelocity</code> parameter. It takes a single floating point parameter that corresponds to the temperature in Kelvin.</p>
+						<p>This class is exclusively for the <code>initialVelocity</code> parameter. It takes a single tuple containing three floating point arguments, corresponding to the temperature with which, each component of each velocity must be distributed.</p>
 
-						<p>Its job is to instruct PaTriC to draw the initial velocities of the particles from a Maxwellian distribution centered at 0 with FWHM related to the temperature provided.</p>
+						<p>Its job is to instruct PaTriC to draw the initial velocities of the particles from a Maxwellian distribution centered at 0 with FWHM related to the temperature provided. An example usage is <br/>
+						<code>Maxwellian((11600, 11600, 23200))</code></p>
 						<div class="callout-block callout-block-success">
                             <div class="content">
                                 <h4 class="callout-title">
@@ -241,20 +241,20 @@
                                 <p>The <code>Maxwellian</code> class constructor takes its input in kelvins. If you wish to work in electron-volts, a helper function called <code>eVToKelvin</code> has been defined in the <code>units</code> module for your convenience.</p>
                             </div><!--//content-->
                         </div><!--//callout-block-->
-					</section><!--//section-->
-
+						
 						<div class="callout-block callout-block-warning">
                             <div class="content">
                                 <h4 class="callout-title">
-	                                <span class="callout-icon-holder me-1">
-		                                <i class="fas fa-bullhorn"></i>
+									<span class="callout-icon-holder me-1">
+										<i class="fas fa-bullhorn"></i>
 		                            </span><!--//icon-holder-->
 	                                Warning
 	                            </h4>
                                 <p>In python, tuples are typically defined using a pair of parantheses <code>()</code>. However, when you request <code>Uniform</code> or <code>Random</code> or <code>Maxwellian</code> placement, there will be only a single item in the tuple. In such a case, the code <code>(Maxwellian(temp))</code> will be considered the same as <code>Maxwellian(temp)</code>, i.e., the tuple won't be created. To get around this, always place a guard empty element in the tuple.<br/>
-								Use <code>(Maxwellian(temp), )</code>. </p>
-                            </div><!--//content-->
-                        </div><!--//callout-block-->
+									Use <code>(Maxwellian(temp), )</code>. </p>
+								</div><!--//content-->
+							</div><!--//callout-block-->
+						</section><!--//section-->
 
 
 					<section class="docs-section" id="item-4-4">
@@ -278,122 +278,45 @@
 					</section><!--//section-->
 
 					<section class="docs-section" id="item-4-5">
-						<h2 class="section-heading">The Output Dict</h2>
-						<p>The function of the Output dictionary is to inform PaTriC how to dump the data from the simulation. This includes the file name for output, the file path, any optional data you want to put in the info file, and the variables to dump.</p>
+						<h2 class="section-heading">SinField Class</h2>
+						<p>This class instructs PaTriC to create a sinusoidal field with the configuration specified via the parameters provided to the constructor. Both the electric as well as the magnetic field parameter of the Fields dictionary can take instances of this class.</p>
 
-						<p>The Output dictionary is created using the syntax <code>createOutput(fileName: str, filePath: str, fileHeaders: Tuple[str, ...], dumpInfoFile: bool, dumpVariables: Tuple[str, ...])</code>. A description is as follows:</p>
+						<p>The calling signature is <code>SinField(variable, direction, amp, omega, phi)</code>. The field will then be calculated as $\text{amp} \times \sin (\omega \cdot \text{variable} + \phi)$ in the direction specified by <code>direction</code>. It will be 0 in the remaining two directions.</p>
 
-						<h3>File Name and Path</h3>
-						<p>The <code>fileName</code> argument is a string representing the name of the output file. It should not include any extension. PaTriC will automatically assign <code>.dat</code> extension to the output files. The <code>filePath</code> argument is a string representing the directory path where the output file will be saved. If the directory does not exist, it will be created automatically.</p>
-
-						<h3>fileHeaders Argument</h3>
-						This is a tuple of strings that will be written to an info file dumped alongside the output files, containing basic information about the simulation run. Note that regardless of the number of particles, only a single info file is created and it has the same name as provided via <code>fileName</code>.
-
-						<h3>dumpInfoFile Flag</h3>
-						<p>If you want, you can disable the creation of the info file by passing <code>False</code> to this parameter. The default value is <code>True</code> and thus, info file will be created by default.</p>
-
-						<h3>dumpVariables Argument</h3>
-						<p>This is a tuple of strings that lists the variables you want to dump. Supported values inside this tuple are as follows:</p>
-						<ul>
-							<li><code>POS_(X,Y,Z)</code>: The (x,y,z)-component of position.</li>
-
-							<li><code>VEL_(X,Y,Z)</code>: The (x,y,z)-component of velocity.</li>
-
-							<li><code>E_FIELD_(X,Y,Z)</code>: The (x,y,z)-component of the electric field calculated at each time instant.</li>
-
-							<li><code>B_FIELD_(X,Y,Z)</code>: The (x,y,z)-component of the magnetic field calculated at each time instant</li>
-
-							<li><code>GAMMA</code>: The relativistic factor γ at each time instant.</li>
-						</ul>
+						<p>The <code>variable</code> parameter takes string argument and may be one of <code>T</code>, <code>X</code>, <code>Y</code>, or <code>Z</code>. Lowercase aliases will also work, and <code>time</code> is also accepted. The <code>direction</code> parameter specifies the direction of the field and thus, must be one of <code>X</code>, <code>Y</code>, or <code>Z</code>.</p>
 					</section><!--//section-->
+
+					<section class="docs-section" id="item-4-6">
+						<h2 class="section-heading">GaussField Class</h2>
+						<p>Similar to sinusoidal fields, PaTriC can also create gaussian or super-gaussian electric and magnetic fields. The calling signature is <code>GaussField(variable, direction, amp, center, fwhm, m)</code>. The field will then be calculated as $\text{amp} \times \exp (-\left(\frac{\text{variable} - \text{center}}{\text{fwhm}}\right)^m)$ in the direction specified by <code>direction</code>. It will be 0 in the remaining two directions. The default value for $m$ is 2, which corresponds to a gaussian field.</p>
+
+						<p>The <code>variable</code> parameter takes string argument and may be one of <code>T</code>, <code>X</code>, <code>Y</code>, or <code>Z</code>. Lowercase aliases will also work, and <code>time</code> is also accepted. The <code>direction</code> parameter specifies the direction of the field and thus, must be one of <code>X</code>, <code>Y</code>, or <code>Z</code>.</p>
+					</section><!--//section-->
+
 			    </article><!--//docs-article-->
 			    
 			    <article class="docs-article" id="section-5">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">Analyzing Output</h1>
+					    <h1 class="docs-heading">electric.py</h1>
 					    <section class="docs-intro">
-						    <p>The simulation data from PaTriC is saved as simple <code>.dat</code> files that are human readable and compatible with almost all plotting software. The plotters that ship with PaTriC are under construction and for now, your best bet is to use the <code>numpy.loadtxt</code> and use <code>matplotlib</code> to plot the data as per your convenience.</p>
+						    <p>This file defines classes that are exclusive to defining electric fields for the system. Since <code>Static</code>, <code>SinField</code>, and <code>GaussField</code> are common to defining both electric and magnetic fields, they have been placed in the <code>classes</code> module. The <code>electric</code> module imports these three classes and further defines the following additional ways of creating electric fields:</p>
 						</section><!--//docs-intro-->
+
+						<section class="docs-section" id="item-5-1">
+							<h2 class="section-heading">Point Charge</h2>
+							<p>A point charge can be placed anywhere in the system and its effect studied. The electric field due to a point charge is given as $\vec{E} = \frac{1}{4\pi\epsilon_0} \frac{Q}{|\vec{r}|^2} \hat{r}$.</p>
+
+							<p>To add a point charge to the system, add an instance of this class to the electric field tuple in the Fields dictionary. The calling signature is <code>PointCharge(x: float, y: float , z: float, q: float)</code>. The first three parameters are the coordinates of the point charge, and <code>q</code> is the value of the charge itself.</p>
+						</section><!--//section-->
+
+						<section class="docs-section" id="item-5-2">
+							<h2 class="section-heading">Electric Dipole</h2>
+							<p>The presence of an electric dipole can also be simulated. This is defined in terms of its dipole moment $\vec{p}$, and the location of its center, $\vec{r}$. Recall that the field due to an electric dipole is given by $$E(\vec{r}) = \frac{1}{4\pi\epsilon_0 |\vec{r}|^3} \left(3 (\vec{p} \cdot \hat{r})\hat{r} - \vec{p} \right)$$</p>
+
+							<p>The calling signature is <code>ElectricDipole(p: tuple[float, float, float], r: tuple[float, float, float])</code>, where the tuple <code>p</code> contains the components of the dipole moment, and the tuple <code>r</code> contains the components of the position vector of the dipole's center.</p>
+						</section><!--//section-->
 				    </header>
-				     <section class="docs-section" id="item-5-1">
-						<h2 class="section-heading">Data Structure</h2>
-						<p>The output data file contains tabspace separated columns, with each column corresponding to a particular variable, and each row corresponding to a particular time-step. All data is dumped in SI units, in scientific format, with precision of 12 decimal places.</p>
-
-						<p>For each particle you load in the simulation, a separate output file will be created, and numbers starting with 0 will be appended at the end of the file name, corresponding to each particle.</p>
-
-						<p>The first row of is a header containing the description of each of the columns. The order of these columns is fixed and if a particular variable is not requested in the <code>dumpVariables</code> tuple in the Output dictionary, its column is not created in the output file.</p>
-
-						<h5>Order of Columns in Output File</h5>
-						<div class="table-responsive my-4">
-							<table class="table table-bordered table-dark">
-								<thead>
-									<tr>
-										<th scope="col">Column</th>
-										<th scope="col">Variable</th>
-										<th scope="col">Dumped</th>
-										<th scope="col">Units</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<th scope="row">1</th>
-										<td>Time</td>
-										<td>Always</td>
-										<td>Seconds</td>
-									</tr>
-									<tr>
-										<th scope="row">2,3,4</th>
-										<td>Position (X,Y,Z)</td>
-										<td>On request</td>
-										<td>Metres</td>
-									</tr>
-									<tr>
-										<th scope="row">5,6,7</th>
-										<td>Velocity (X,Y,Z)</td>
-										<td>On request</td>
-										<td>Metres per second</td>
-									</tr>
-									<tr>
-										<th scope="row">8</th>
-										<td>Relativistic Factor γ</td>
-										<td>On request</td>
-										<td>Dimensionless</td>
-									</tr>
-									<tr>
-										<th scope="row">9,10,11</th>
-										<td>Electric Field (X,Y,Z)</td>
-										<td>On request</td>
-										<td>Volts per metre</td>
-									</tr>
-									<tr>
-										<th scope="row">12,13,14</th>
-										<td>Magnetic Field (X,Y,Z)</td>
-										<td>On request</td>
-										<td>Tesla</td>
-									</tr>
-								</tbody>
-							</table>
-						</div><!--//table-responsive-->
-
-						<div class="callout-block callout-block-info">
-                            <div class="content">
-                                <h4 class="callout-title">
-	                                <span class="callout-icon-holder me-1">
-		                                <i class="fas fa-info-circle"></i>
-		                            </span><!--//icon-holder-->
-	                                Note
-	                            </h4>
-                                <p>Since the electric and magnetic fields are calculated at the beginning of each iteration, the very last iteration does not have information about them. Thus, the last row for electric and magnetic fields will contain <code>NaN</code>.</p>
-                            </div><!--//content-->
-                        </div><!--//callout-block-->
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-5-2">
-						<h2 class="section-heading">The Info File</h2>
-						<p>This is a plain text file named as <code>&lt;fileName&gt;.info</code>. The strings you provide in the <code>fileHeaders</code> tuple will be written at the top of this info file, with each string in a new line.</p>
-
-						<p>The info file also contains the the total time taken (tt) to run the program, the time-step used (dt), and the number of tierations (ni). And finally, the target information including charge, mass, number of particles, and initial conditions for each of the particles are also dumped in this file. This can come in handy when analyzing the output.</p>
-					</section><!--//section-->
+				     
 					
 					
 			    </article><!--//docs-article-->
@@ -401,7 +324,7 @@
 			    
 		        <article class="docs-article" id="section-6">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">Web</h1>
+					    <h1 class="docs-heading">magnetic.py</h1>
 					    <section class="docs-intro">
 						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
 						</section><!--//docs-intro-->
@@ -534,7 +457,16 @@
        
     <!-- Javascript -->          
     <script src="assets/plugins/popper.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  	<script>
+		MathJax = {
+			tex: {
+			inlineMath: [['$', '$']]
+			}
+		};
+	</script>  
     
     
     <!-- Page Specific JS -->
