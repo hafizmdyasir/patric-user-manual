@@ -41,20 +41,17 @@
                 </div><!--//docs-logo-wrapper-->
 
 	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
-	                <div class="top-search-box d-none d-lg-flex">
+	                <!-- <div class="top-search-box d-none d-lg-flex">
 		                <form class="search-form">
 				            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
 				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
 				        </form>
-	                </div>
+	                </div> -->
 	
 					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+						<li class="list-inline-item"><a href="https://github.com/hafizmdyasir/PaTriC"><i class="fab fa-github fa-fw"></i></a></li>
 		            </ul><!--//social-list-->
-		            <a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-5-documentation-template-for-software-projects/" class="btn btn-primary d-none d-lg-flex">Download</a>
+		            <a href="https://github.com/hafizmdyasir/PaTriC/archive/refs/heads/main.zip" class="btn btn-primary d-none d-lg-flex">Download</a>
 	            </div><!--//docs-top-utilities-->
             </div><!--//container-->
         </div><!--//branding-->
@@ -63,12 +60,12 @@
     
     <div class="docs-wrapper">
 	    <div id="docs-sidebar" class="docs-sidebar">
-		    <div class="top-search-box d-lg-none p-3">
+		    <!-- <div class="top-search-box d-lg-none p-3">
                 <form class="search-form">
 		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
 		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
 		        </form>
-            </div>
+            </div> -->
 		    <nav id="docs-nav" class="docs-nav navbar">
 			    <ul class="section-items list-unstyled nav flex-column pb-3">
 				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
@@ -92,19 +89,11 @@
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Electric Dipole</a></li>
 
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-magnet"></i></span>magnetic.py</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">Section Item 6.1</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-2">Section Item 6.2</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-3">Section Item 6.3</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">Magnetic Coil</a></li>
 
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder me-2"><i class="fas fa-tablet-alt"></i></span>Mobile</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-1">Section Item 7.1</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-2">Section Item 7.2</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-7-3">Section Item 7.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-7"><span class="theme-icon-holder me-2"><i class="fas fa-tablet-alt"></i></span>Units.py</a></li>
 
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Resources</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-1">Section Item 8.1</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-2">Section Item 8.2</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-8-3">Section Item 8.3</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-8"><span class="theme-icon-holder me-2"><i class="fas fa-book-reader"></i></span>Deck Tools</a></li>
 
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-9"><span class="theme-icon-holder me-2"><i class="fas fa-lightbulb"></i></span>FAQs</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-9-1">Section Item 9.1</a></li>
@@ -326,73 +315,43 @@
 				    <header class="docs-header">
 					    <h1 class="docs-heading">magnetic.py</h1>
 					    <section class="docs-intro">
-						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						    <p>Similar to the <code>electric.py</code> module, this file contains definitions of classes that can be used to specify magnetic fields For now, only a magnetic coil has been supported and any other type of field must be specified via python functions.</p>
 						</section><!--//docs-intro-->
 				    </header>
 				     <section class="docs-section" id="item-6-1">
-						<h2 class="section-heading">Section Item 6.1</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-6-2">
-						<h2 class="section-heading">Section Item 6.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-6-3">
-							<h2 class="section-heading">Section Item 6.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">Magnetic Coil</h2>
+						<p>A magnetic coil or a current loop essentially contains $n$ turns of a wire wrapped tightly in a circle of radius $r$. The on-axis field of such a configuration is fairly easy to find, but the off-axis field can prove quite difficult. To get around this problem, we have created this class which can correctly find the field at any point due to the coil.</p>
+
+						<p>The calling signature is <code>Coil(radius: float, current: float, zPosition: float = 0)</code>. For now, you can only place the coil with its axis along the z-axis and the position along the z-axis is controlled by the third parameter in the constructor. Note that the second parameter <code>current</code> includes the number of turns in the coil. Thus, if you have a current of $1$ A running through a $5$ turn coil, provide current as $5$.</p>
 					</section><!--//section-->
 			    </article><!--//docs-article-->
-			    
-			    
-			    <article class="docs-article" id="section-7">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Mobile</h1>
-					    <section class="docs-intro">
-						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
-						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-7-1">
-						<h2 class="section-heading">Section Item 7.1</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-7-2">
-						<h2 class="section-heading">Section Item 7.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-7-3">
-							<h2 class="section-heading">Section Item 7.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-			    </article><!--//docs-article-->
-			    
 			    
 			    <article class="docs-article" id="section-8">
 				    <header class="docs-header">
-					    <h1 class="docs-heading">Resources</h1>
+					    <h1 class="docs-heading">Deck Tools</h1>
 					    <section class="docs-intro">
-						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						    <p>This is the most important module in the system. It imports all modules except for <code>units</code> and in all the cases, you must only import this module to create your input script. Apart from the constants and functions imported from the previously mentioned modules, the deck tools module contains four functions that you will call to create the input dictionaries for PaTriC.</p>
+
+							<p>How these functions work has already been explained on the docs page for PaTriC. We list them again for quick reference:</p>
+							<ol>
+								<li><code>createControl(...)</code>: For defining the control dictionary.</li>
+								<li><code>createParticles(...)</code>: For defining the particle dictionary.</li>
+								<li><code>createFields(...)</code>: For defining the fields dictionary.</li>
+								<li><code>createOutput(...)</code>: For defining the output dictionary.</li>
+							</ol>
 						</section><!--//docs-intro-->
 				    </header>
-				     <section class="docs-section" id="item-8-1">
-						<h2 class="section-heading">Section Item 8.1</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-8-2">
-						<h2 class="section-heading">Section Item 8.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-8-3">
-							<h2 class="section-heading">Section Item 8.3</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
 			    </article><!--//docs-article-->
 			    
+
+			    <article class="docs-article" id="section-7">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Units.py</h1>
+					    <section class="docs-intro">
+						    <p>This is just a helper module you can import into your input script and includes a few constants like <code>MICRON</code>, <code>ANGSTORM</code>, etc. Along with that, helper functions to convert across energy and temperature units are also provided.</p>
+						</section><!--//docs-intro-->
+				    </header>
+			    </article><!--//docs-article-->
 			    
 			    <article class="docs-article" id="section-9">
 				    <header class="docs-header">
