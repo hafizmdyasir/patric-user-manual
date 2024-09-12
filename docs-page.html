@@ -437,7 +437,7 @@ Terminated</code></pre>
 
 						<h5>Order of Columns in Output File</h5>
 						<div class="table-responsive my-4">
-							<table class="table table-bordered table-dark">
+							<table class="table table-bordered">
 								<thead>
 									<tr>
 										<th scope="col">Column</th>
@@ -467,7 +467,7 @@ Terminated</code></pre>
 									</tr>
 									<tr>
 										<th scope="row">8</th>
-										<td>Relativistic Factor γ</td>
+										<td>Relativistic Factor $\gamma$</td>
 										<td>On request</td>
 										<td>Dimensionless</td>
 									</tr>
@@ -498,6 +498,19 @@ Terminated</code></pre>
                                 <p>Since the electric and magnetic fields are calculated at the beginning of each iteration, the very last iteration does not have information about them. Thus, the last row for electric and magnetic fields will contain <code>NaN</code>.</p>
                             </div><!--//content-->
                         </div><!--//callout-block-->
+
+						<div class="callout-block callout-block-info">
+                            <div class="content">
+                                <h4 class="callout-title">
+	                                <span class="callout-icon-holder me-1">
+		                                <i class="fas fa-info-circle"></i>
+		                            </span><!--//icon-holder-->
+	                                Note
+	                            </h4>
+                                <p>Some plotting programs like VisIt might recognize an extra empty column in the output data file. This does not affect the simulation data. If you are unsure, the <code>.dat</code> file is human readable and you can recheck for yourself.</p>
+                            </div><!--//content-->
+                        </div><!--//callout-block-->
+
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-5-2">
